@@ -1,3 +1,9 @@
+# Disclaimer
+
+This repo contains the package MLANP written by Marcello Chiodi.
+This package is not fully tested and just for teaching purposes.
+The rest of the code also is for teaching purposes.
+
 # Sondermodul Simulation Studies with R
 
 Dieses Repo beinhaltet Übungen und Abgaben des Sondermoduls.
