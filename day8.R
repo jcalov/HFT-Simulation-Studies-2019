@@ -42,9 +42,11 @@ plotHistogramWithDensites <- function(
   # used bandwidth is actually bw * adjust
   legends = vector()
   legendColors = vector()
+  colorCounter = 1
   for (i in 1:length(densityAdjustFactors)) {
     for (j in 1:length(kernels)) {
-      lineColor = i+j
+      lineColor = colorCounter
+      colorCounter = colorCounter + 1
       lineLegend = paste(kernels[j], densityAdjustFactors[i])
       legends = c(legends, lineLegend)
       legendColors = c(legendColors, lineColor)
@@ -53,11 +55,7 @@ plotHistogramWithDensites <- function(
     }
   }
   
-  # Add a legend
-  # TODO make it work...
-  cat(legends)
-  cat(legendColors)
-  legend(x = 50, legend=legends, col=legendColors)
+  legend("topright", legend=legends, col=legendColors, lty="solid", cex = 0.8)
 }
 plotHistogramWithDensites(dat$peso, dataName =  "weight in kg")
 
